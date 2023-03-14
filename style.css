@@ -76,7 +76,7 @@ h6 {
 }
 
 .container {
-  width: 1150px;
+  max-width: 1150px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -94,7 +94,8 @@ h6 {
   line-height: 40px;
 }
 
-.top-header-left ul li {
+
+.top-header-left ul li a, .top-header-left ul li{
   display: inline-block;
   color: #d9d9d9;
   font-size: 12px;
@@ -181,11 +182,12 @@ h6 {
   left: 0;
   width: 100%;
   height: auto;
-  padding: 4rem 0 3rem;
+  padding: 2rem 0 3rem;
   overflow: hidden;
   background-color: #000;
   box-shadow: var(--shadow-medium);
   transition: all 0.4s ease-in-out;
+  z-index: 9999;
 }
 
 .menu.is-active {
@@ -210,6 +212,10 @@ h6 {
   color: #fff;
   text-transform: uppercase;
   transition: all 0.3s ease;
+}
+
+.menu-link:hover{
+  color: #fff;
 }
 
 .menu-block {
@@ -274,6 +280,7 @@ h6 {
   visibility: visible;
   transform: rotate(0deg);
   transition: 0.35s ease;
+  z-index: 999999;
 }
 
 @media only screen and (min-width: 48rem) {
@@ -329,7 +336,7 @@ h6 {
   position: absolute;
   padding: 1.5%;
   z-index: 9;
-  top: 40%;
+  top: 30%;
   left: 34%;
   transform: translate(-34%, -40%);
   color: #ce3232;
@@ -636,7 +643,7 @@ h6 {
 .calling-us {
   padding-left: 15px;
 }
-.calling-us h4 {
+.calling-us h4 a {
   font-size: 20px;
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -741,7 +748,7 @@ h6 {
 }
 
 .service-content {
-  transition: .2s ease-out;
+  transition: .4s ease-out;
   padding:15px 15px 10px 15px;
   position: relative;
   z-index: 1;
@@ -770,16 +777,24 @@ h6 {
 
 .service-box{
   margin-bottom: 40px;
+  transition: .4s ease-out;
 }
 
 .service-box:hover .service-content{
   margin-top: -20px;
+  background-color: #c30505;
+  color: #fff;
 }
+
 
 .right-icon{
   text-align: right;
   color: #c40606;
   font-size: 24px;
+}
+.service-box:hover .service-content h5, .service-box:hover .service-content p, .service-box .right-icon i{
+  color: #fff;
+
 }
 
 .help-section{
@@ -896,8 +911,12 @@ h6 {
 .testimonials-style1-area {
   position: relative;
   display: block;
-  background: #d2d2d2;
-  padding: 120px 0px 120px;
+  /* background: #d2d2d2; */
+  background: url(assets/image/background.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 80px 0px 80px;
   overflow: hidden;
   z-index: 10;
 }
@@ -921,7 +940,18 @@ h6 {
   padding-bottom: 0;
 }
 .testimonial-style1-title-box .sec-title h2 {
-  color: #ffffff;
+  color: #0f0d1d;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.testimonial-style1-title-box .sec-title p{
+  color: #726f84;
+  font-weight: 500;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
 }
 .single-testimonials-style1 {
   position: relative;
@@ -931,22 +961,45 @@ h6 {
   position: relative;
   display: block;
   background-color: #ffffff;
-  padding: 43px 40px 43px;
-  border-radius: 8px;
+  padding: 32px 40px 43px;
+  border-radius: 0px;
   z-index: 1;
 }
 
+.qutation img{
+  height: 40px;
+}
+
 
 .single-testimonials-style1 .text-box p {
-  color: #494949;
+  color: #726f84;
   transition: all 200ms linear;
   transition-delay: 0.1s;
+  font-family: 'Jost', sans-serif;
 }
-.single-testimonials-style1 .text-box p {
-  color: #494949;
-  transition: all 200ms linear;
-  transition-delay: 0.1s;
+.title-box{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 20px;
 }
+
+.title-box h3{
+  font-family: 'Jost', sans-serif;
+  color: #2d2d2d;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.title-box span{
+  color: #2d2d2d;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Jost', sans-serif;
+}
+
 
 .testimonial-style1-carousel.owl-nav-style-one.owl-theme .owl-nav {
   position: absolute;
@@ -961,8 +1014,8 @@ h6 {
   display: inline-block;
   width: 50px;
   height: 50px;
-  background-color: transparent;
-  border: 2px solid #a7afb6;
+  background-color: #fff;
+  color: #c40606;
   border-radius: 50%;
   margin: 0 10px;
   padding: 0;
@@ -994,11 +1047,219 @@ h6 {
   position: relative;
   display: block;
   color: #a7afb6;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 46px;
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
 .icon-left-arrow:before {
-  content: "\e90c";
+  content: "\f178" !important;
+}
+.owl-nav-style-one.owl-theme .owl-nav [class*="owl-"]:focus{
+  border:none;
+  outline: none;
+}
+.owl-nav-style-one.owl-theme .owl-nav [class*="owl-"]:hover{
+  border:none;
+  color: #2d2d2d;
+  outline: none;
+}
+
+
+.free-consultant{
+  padding: 45px 0;
+  background: url(assets/image/cta-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+.free-left{
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+}
+
+.free-left h3{
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+.free-left h5{
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.free-left h4 a{
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.free-left h4 span{
+  font-size: 14px;
+}
+
+.free-right{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.free-right a{
+  font-family: 'Jost', sans-serif;
+    background: #fff;
+    color: #c30505;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: .3s ease-out;
+
+}
+
+.free-right a:hover{
+   background: #0c0f13;
+   color: #fff;
+}
+
+
+.footer{
+  position: relative;
+  width: 100%;
+  background-color: #0f0d1d;
+  padding: 80px 0 30px 0;
+
+}
+
+.footer-img{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.footer-box .footer-box-title{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.welcome{
+
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  color: #8f8da0;
+}
+
+.line{
+  width: 70%;
+  height: 1px;
+  background-color: #272634;
+  margin: 30px 0;
+}
+
+.first-ul li, .first-ul li a{
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  color: #8f8da0;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.first-ul li span{
+  color: #c40606;
+  padding-right: 15px;
+}
+
+.second-ul-box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-ul-box ul li{
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  color: #8f8da0;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.subscribe-box{
+  background-color: #06050c;
+  padding: 25px;
+}
+.subscribe-box p{
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  color: #8f8da0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.input-area{
+  background-color: #fff;
+  position: relative;
+}
+
+.input-area input{
+  border: none;
+  outline: none;
+  padding: 10px 0px 10px 10px;
+ 
+}
+.input-area input:focus{
+  outline: none;
+}
+.input-area input::placeholder{
+  color: #8f8da0;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.register-btn {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  background-color: red;
+  padding: 11px;
+  top: 0;
+  right: 0;
+  font-size: 15px;
+  transition: .3s ease-out;
+}
+.register-btn:hover{
+  background-color: #0c7f7f;
+  color: #fff;
+}
+
+.footer-copyright p{
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  color: #8f8da0;
+  font-size: 14px;
+}
+
+.footer-middle .line{
+  width: 100%;
+}
+.footer-bottom-ul li{
+  display: inline-block;
+}
+.footer-bottom-ul li a{
+  text-decoration: none;
+  color: #8f8da0;
+  padding: 5px;
+  transition: .3s ease-out;
+}
+.footer-bottom-ul li a:hover{
+  color: #c30505;
 }

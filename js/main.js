@@ -66,9 +66,28 @@ $(function () {
 		loop: true,
 		dots: false,
 		nav: true,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplayHoverPause: false,
+		navText: [
+			"<i class='fa fa-long-arrow-left'></i>",
+			"<i class='fa fa-long-arrow-right'></i>"
+		 ],
+		 "responsive": {
+			"0": {
+				"items": 1
+			},
+			"768": {
+				"items": 2
+			},
+			"992": {
+				"items": 2
+			},
+			"1200": {
+				"items": 2
+			}
+		}
+
 	});
 });
 
