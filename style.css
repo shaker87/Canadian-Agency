@@ -965,7 +965,7 @@ h6 {
   /* background: #d2d2d2; */
   background: url(assets/image/background.png);
   width: 100%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: center;
   padding: 80px 0px 80px;
   overflow: hidden;
