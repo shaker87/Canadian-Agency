@@ -67,7 +67,7 @@ $(function () {
 		dots: false,
 		nav: true,
 		autoplay: true,
-		autoplayTimeout: 5000,
+		autoplayTimeout: 2000,
 		autoplayHoverPause: false,
 		navText: [
 			"<i class='fa fa-long-arrow-left'></i>",
