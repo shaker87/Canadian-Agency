@@ -338,11 +338,12 @@ h6 {
 
 .desc {
   position: absolute;
+  height: 100%;
   padding: 1.5%;
   z-index: 9;
-  top: 30%;
-  left: 34%;
-  transform: translate(-34%, -40%);
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -40%);
   color: #ce3232;
 }
 /* .desc:before {
